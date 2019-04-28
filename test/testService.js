@@ -6,7 +6,7 @@ describe('Get content from suppliers', function() {
     describe('AIR_MOON', function() {
         var result  = "";
         beforeEach(function(done) {
-            flyService.getFly(config.providers.AIR_MOON)
+            flyService.getFly(config.providers.AIR_MOON.lowercase)
             .then(function(response) {
                 result = response;
                 done();
@@ -23,7 +23,7 @@ describe('Get content from suppliers', function() {
     describe('AIR_JAZZ', function() {
         var result  = "";
         beforeEach(function(done) {
-            flyService.getFly(config.providers.AIR_JAZZ)
+            flyService.getFly(config.providers.AIR_JAZZ.lowercase)
             .then(function(response) {
                 result = response;
                 done();
@@ -40,7 +40,7 @@ describe('Get content from suppliers', function() {
     describe('AIR_BEAM', function() {
         var result  = "";
         beforeEach(function(done) {
-            flyService.getFly(config.providers.AIR_BEAM)
+            flyService.getFly(config.providers.AIR_BEAM.lowercase)
             .then(function(response) {
                 result = response;
                 done();
