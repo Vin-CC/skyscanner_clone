@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const flyController = require('../controller/flyController');
 
 /* GET Fly informations. */
-router.get('/api/flights', function(req, res, next) {
-  res.json({ message: 'some data' });
-});
+router.get('/api/flights', flyController.getAggregatedFly);
 
 module.exports = router;
