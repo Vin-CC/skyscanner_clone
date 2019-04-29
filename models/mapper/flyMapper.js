@@ -21,7 +21,7 @@ class FlyMapper {
     beamMapper(data) {
         var beamFly = new FlyDto();
         beamFly.setProvider(config.providers.AIR_BEAM.uppercase);
-        beamFly.setPrice(data.p);
+        beamFly.setPrice(parseFloat(data.p));
         beamFly.setDepartureTime(data.departure);
         beamFly.setArrivalTime(data.arrival);
         return beamFly.toObject();
