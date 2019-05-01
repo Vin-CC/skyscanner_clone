@@ -1,10 +1,12 @@
-var createError = require('http-errors');
-var express = require('express');
+const createError = require('http-errors');
+const express = require('express');
+const helmet = require('helmet');
 
-var indexRouter = require('./routes/index');
+const indexRouter = require('./routes/index');
 
-var app = express();
+const app = express();
 
+app.use('/', helmet());
 app.use('/', indexRouter);
 
 // catch 404 and forward to error handler

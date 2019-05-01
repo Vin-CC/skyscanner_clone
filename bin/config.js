@@ -14,5 +14,11 @@ module.exports = {
         }
     },
     token: "e10e4cb0",
-    providers_url: "https://my.api.mockaroo.com"
+    providers_url: "https://my.api.mockaroo.com",
+    user: {
+        id: 1,
+        userName: "Client"
+    },
+    privateKey: "skyscanner",
+    expireTime: { expiresIn: '30s' }
 }
