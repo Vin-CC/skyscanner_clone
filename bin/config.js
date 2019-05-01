@@ -20,5 +20,7 @@ module.exports = {
         userName: "Client"
     },
     privateKey: "skyscanner",
-    expireTime: { expiresIn: '30s' }
+    expireTime: { expiresIn: '30s' },
+    requests: 10,
+    duration: 1
 }

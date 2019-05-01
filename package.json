@@ -12,6 +12,8 @@
     "helmet": "^3.16.0",
     "http-errors": "~1.6.2",
     "jsonwebtoken": "^8.5.1",
-    "mocha": "^6.1.4"
+    "mocha": "^6.1.4",
+    "rate-limiter-flexible": "^1.0.1",
+    "redis": "^2.8.0"
   }
 }
