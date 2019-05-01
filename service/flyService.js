@@ -1,8 +1,6 @@
 var axios  = require('axios');
 var config = require('../bin/config');
 
-var token = "e10e4cb0";
-var url = "https://my.api.mockaroo.com"
 
 class FlyService {
     getFly(provider) {

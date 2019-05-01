@@ -1,8 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const flyController = require('../controller/flyController');
+const FlyController = require('../controller/flyController');
 
 /* GET Fly informations. */
-router.get('/api/flights', flyController.getAggregatedFly);
+router.get('/api/flights', function(req, res) {
+    let controller = new FlyController;
+    controller.getAggregatedFly(req, res);
+});
 
 module.exports = router;

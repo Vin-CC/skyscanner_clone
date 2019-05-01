@@ -1,5 +1,5 @@
 const assert = require("assert");
-const flyController = require("../controller/flyController");
+const FlyController = require("../controller/flyController");
 
 describe("List of fly aggregated", function() {
     it("should be aggregated", function() {
@@ -26,7 +26,7 @@ describe("List of fly aggregated", function() {
                 "arrival_time": "5:58 AM"
             }
         ];
-        let listAggregated = flyController.aggregateFly(data);
+        let listAggregated = FlyController.aggregateFly(data);
         let expected = [
             {
                 "provider": "AIR_MOON",
@@ -51,6 +51,6 @@ describe("List of fly aggregated", function() {
             }
         ];
 
-        assert.equal(listAggregated.length, expected.length);
+        assert.deepEqual(listAggregated, expected);
     });
 });
