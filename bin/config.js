@@ -13,7 +13,7 @@ module.exports = {
             uppercase: "AIR_BEAM"
         }
     },
-    token: "e10e4cb0",
+    token: "dd764f40",
     providers_url: "https://my.api.mockaroo.com",
     user: {
         id: 1,
