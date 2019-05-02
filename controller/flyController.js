@@ -45,8 +45,6 @@ class FlyController {
             res.json(FlyController.aggregateFly(newTab));
         })
         .catch(function(error) {
-            /*res.json(error.message);
-            console.log(error.name, error.message);*/
             res.status(500).json({error:true});
         });
     };

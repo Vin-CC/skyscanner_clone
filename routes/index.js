@@ -18,6 +18,7 @@ router.get('/api/flights', rateLimiterRedisMiddleware, authUtils.veryifToken, fu
     });
 });
 
+/* Get security tokken */
 router.post('/auth', rateLimiterRedisMiddleware, function(req, res) {
     jwt.sign(config.user, config.privateKey, config.expireTime, function(err, token) {
         res.json({token});

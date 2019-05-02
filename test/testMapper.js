@@ -15,9 +15,12 @@ describe("Content formated by mapper", function() {
         assert.deepStrictEqual(formatedData, expected);
     });
     it("should formate AIR_BEAM item", function() {
-        let data = "id,p,departure,arrival\n14e6f085-b5b5-48f7-b3c5-6c6202d50f48,501.33,4:12 AM,5:02 AM",
+        let data = "id,p,departure,arrival\n14e6f085-b5b5-48f7-b3c5-6c6202d50f48,501.33,4:12 AM,5:02 AM\n46ea7e60-c0a4-429a-8917-3917d903236d,497.0,7:22 PM,5:58 AM",
             formatedData = flyMapper.beamAllMapper(data),
-            expected = [{provider: "AIR_BEAM", price: 501.33, departure_time: "4:12 AM", arrival_time: "5:02 AM" }];
+            expected = [
+                {provider: "AIR_BEAM", price: 501.33, departure_time: "4:12 AM", arrival_time: "5:02 AM" },
+                {provider: "AIR_BEAM", price: 497.0, departure_time: "7:22 PM", arrival_time: "5:58 AM" }
+            ];
         assert.deepStrictEqual(formatedData, expected);
     });
 });

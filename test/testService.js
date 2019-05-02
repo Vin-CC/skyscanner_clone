@@ -1,10 +1,10 @@
-var assert = require('assert');
-var flyService = require('../service/flyService');
-var config = require('../bin/config');
+const assert = require('assert');
+const flyService = require('../service/flyService');
+const config = require('../bin/config');
 
 describe('Get content from suppliers', function() {
     describe('AIR_MOON', function() {
-        var result  = "";
+        let result  = "";
         beforeEach(function(done) {
             flyService.getFly(config.providers.AIR_MOON.lowercase)
             .then(function(response) {
@@ -17,11 +17,11 @@ describe('Get content from suppliers', function() {
             });
         });
         it('should get the data from the supplier AIR_MOON', function() {
-            assert.equal(result.length,10);
+            assert.ok(result.length);
         });
     });
     describe('AIR_JAZZ', function() {
-        var result  = "";
+        let result  = "";
         beforeEach(function(done) {
             flyService.getFly(config.providers.AIR_JAZZ.lowercase)
             .then(function(response) {
@@ -34,11 +34,11 @@ describe('Get content from suppliers', function() {
             });
         });
         it('should get the data from the supplier AIR_JAZZ', function() {
-            assert.equal(result.length,10);
+            assert.ok(result.length);
         });
     });
     describe('AIR_BEAM', function() {
-        var result  = "";
+        let result  = "";
         beforeEach(function(done) {
             flyService.getFly(config.providers.AIR_BEAM.lowercase)
             .then(function(response) {
@@ -51,7 +51,7 @@ describe('Get content from suppliers', function() {
             });
         });
         it('should get the data from the supplier AIR_BEAM', function() {
-            assert.equal(result.length,10);
+            assert.ok(result.length);
         });
     });
 });

@@ -1,6 +1,6 @@
-var flyService = require('../service/flyService');
-var config = require('../bin/config');
-var flyMapper = require('./mapper/flyMapper');
+const flyService = require('../service/flyService');
+const config = require('../bin/config');
+const flyMapper = require('./mapper/flyMapper');
 
 class  FlyModel {
 

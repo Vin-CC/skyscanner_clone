@@ -1,10 +1,10 @@
-var assert = require('assert');
-var flyModel = require('../models/flyModel');
-var config = require('../bin/config');
+const assert = require('assert');
+const flyModel = require('../models/flyModel');
+const config = require('../bin/config');
 
 describe('Content from suppliers formated', function() {
     describe('AIR_MOON', function() {
-        var result  = "";
+        let result  = "";
         beforeEach(function(done) {
             flyModel.getMoonFly()
             .then(function(response) {
@@ -26,7 +26,7 @@ describe('Content from suppliers formated', function() {
         });
     });
     describe('AIR_JAZZ', function() {
-        var result  = "";
+        let result  = "";
         beforeEach(function(done) {
             flyModel.getJazzFly()
             .then(function(response) {
@@ -48,7 +48,7 @@ describe('Content from suppliers formated', function() {
         });
     });
     describe('AIR_BEAM', function() {
-        var result  = "";
+        let result  = "";
         beforeEach(function(done) {
             flyModel.getBeamFly()
             .then(function(response) {
